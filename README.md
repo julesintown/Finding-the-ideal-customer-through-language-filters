@@ -1,4 +1,3 @@
-# Project 1
 # Finding the Ideal Customer Through Language Filters
 
 ## Goal
@@ -143,20 +142,33 @@ SELECT * FROM (
 
 As my role in the company was "Customer Happiness Manager", I gathered monthly first-hand qualitative insights and NPS values to measure customer satisfaction. Customer input was received by a third-party iframe integration into the company app. I stored all incoming values in an automated Excel sheet. Through a VLOOKUP formula, I could join the CustomerID field with the analysis that I conducted earlier to compare NPS values between Germans and non-Germans.
 
+
+```
+=VLOOKUP(Customers[CustomerID], 
+         AnalysisData[CustomerID], 
+         AnalysisData[NPS],2, 
+         FALSE)
+```
+
 ## Success
 
 (Due to data protection reasons, I will only use percentage values instead of absolute numbers)
 
 **Hypothesis 1:** Customers without a German language tag worked 35% more than German customers, which is more than significant, facing the fact that the app did not yet have an English version or sufficient English-speaking customer agents. Later, we found out that they also worked more frequently and more hours per day on average.
+![Bildschirmfoto 2024-09-09 um 17 27 59](https://github.com/user-attachments/assets/e0e1fe4a-1c0f-46f6-83d5-d9e6efa011ac)
 
 **Hypothesis 2:** During the four onboarding steps that were set in MariaDB, we can see the following difference:
 
-**Hypothesis 3:** (Show NPS line chart)
+![Bildschirmfoto 2024-09-09 um 17 28 43](https://github.com/user-attachments/assets/2d772233-8064-4827-b114-e64101dffac9)
 
-## Actions
+**Hypothesis 3:** We can see that the NPS is significantly higher among non-German customers. The data analysis was performed in July, which could have led to a further increase after targeted marketing measurements. 
+
+![Bildschirmfoto 2024-09-09 um 17 28 25](https://github.com/user-attachments/assets/a4f4868e-b39a-49eb-9e46-82c572479588)
+
+## Actions and Recommendations 🚀
 
 Data is nothing without the actual reasons and qualitative context where it emerges. As a studied anthropologist and working in the qualitative research department of the company, I conducted interviews together with my research team to explain the findings. In short: Students and side jobbers from other countries often have a difficult time finding a temporary job in Germany, most often due to the language barrier and prejudice. Also, their situation only allowed them to work limited time. An app with flexible job offers, without a complicated application process or speaking German, was perfect for this group.
 
-I was surprised to see that many significant differences between our two customer segments, and so were my colleagues and the managing board. As I was the company's Customer Happiness Manager, not the data analyst, I gave my findings to the data team for successful validation and thus, worked closely with the marketing team to kickstart the production of marketing material in English, that also took into account their needs and struggles. I set up regular meetings with Product Managers to drive forward a translated app environment and especially onboarding process, so that English-speaking customers could understand it better.
+I was surprised to see that many significant differences between our two customer segments, and so were my colleagues and the managing board. As I was the company's Customer Happiness Manager, not the data analyst, I gave my findings to the data team for successful validation and thus, worked closely with the marketing team to kickstart the production of marketing material in English, that also took into account their needs and struggles. I set up regular meetings with Product Managers to drive forward a translated app environment and especially onboarding process, so that English-speaking customers could understand it better. 
 
-As a first result, we saw an increased NPS value and second, a significant increase in revenue, as the company was putting more effort into their new target group. Excluding seasonal fluctuations and average annual growth, the revenue increase was around 17% YoY.
+As a first result, we saw an **increased NPS value** and second, a significant increase in revenue, as the company was putting more effort into their new target group. Excluding seasonal fluctuations and average annual growth, the **revenue increase was around 17% YoY.** 📈
